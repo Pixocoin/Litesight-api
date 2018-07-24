@@ -1,4 +1,4 @@
-# *Litesight API*
+# *Pixo™Sight API*
 
 *Litesight API* is an open-source Litecoin blockchain REST
 and websocket API. Litesight API runs in NodeJS and uses LevelDB for storage. 

@@ -1,31 +1,31 @@
 # *Pixo™Sight API*
 
-*Litesight API* is an open-source Litecoin blockchain REST
-and websocket API. Litesight API runs in NodeJS and uses LevelDB for storage. 
+*Pixo™Sight API* is an open-source Pixo™ Cash blockchain REST
+and websocket API. Pixo™Sight API runs in NodeJS and uses LevelDB for storage. 
 
 This is a backend-only service. If you're looking for the web frontend application,
-take a look at https://github.com/pembo210/Litesight.
+take a look at https://github.com/Pixocoin/Pixo-sight.
 
-*Litesight API* allows to develop Litecoin-related applications (such as wallets) that 
-require certain information from the blockchain that litecoind does not provide.
+*Pixo™Sight API* allows to develop Pixo™ Cash-related applications (such as wallets) that 
+require certain information from the blockchain that PixoCashd does not provide.
 
-A blockchain explorer front-end has been developed on top of *Litesight API*. It can
-be downloaded at [Github Litesight Repository](https://github.com/pembo210/Litesight).
+A blockchain explorer front-end has been developed on top of *Pixo™Sight API*. It can
+be downloaded at [Github Pixo™Sight Repository](https://github.com/Pixocoin/Pixo-sight).
 
 
 ## Prerequisites
 
-* **litecoind** - Download and Install [litecoin](https://github.com/litecoin-project/litecoin)
+* **PixoCashd** - Download and Install [Pixo™ Cash](https://github.com/Pixocoin/Pixo-Cash)
 
-*Litesight API* needs a *trusted* litecoind node to run. *Litesight API* will connect to the node
-through the RPC API, litecoin peer-to-peer protocol, and will even read its raw block .dat files for syncing.
+*Pixo™Sight API* needs a *trusted* PixoCashd node to run. *Pixo™Sight API* will connect to the node
+through the RPC API, Pixo™ Cash peer-to-peer protocol, and will even read its raw block .dat files for syncing.
 
-Configure litecoind to listen to RPC calls and set `txindex` to true.
+Configure PixoCashd to listen to RPC calls and set `txindex` to true.
 The easiest way to do this is by copying `./etc/litecoind/litecoin.conf` to your
-litecoin data directory (usually `~/.litecoin` on Linux, `%appdata%\Litecoin\` on Windows,
-or `~/Library/Application Support/Litecoin` on Mac OS X).
+Pixo™ Cash data directory (usually `~/.PixoCash` on Linux, `%appdata%\PixoCash\` on Windows,
+or `~/Library/Application Support/PixoCash` on Mac OS X).
 
-litecoind must be running and must have finished downloading the blockchain **before** running *Litesight API*.litecoin
+PixoCashd must be running and must have finished downloading the blockchain **before** running *Pixo™Sight API*.litecoin
 
 
 * **Node.js v0.10.x** - Download and Install [Node.js](http://www.nodejs.org/download/).

@@ -37,7 +37,7 @@ PixoCashd must be running and must have finished downloading the blockchain **be
 
   To install Litesight API, clone the main repository:
 
-    $ git clone https://github.com/pembo210/Litesight-api && cd Litesight-api
+    $ git clone https://github.com/Pixocoin/Pixo-sight-api && cd Pixo-sight-api
 
   Install dependencies:
 
@@ -83,33 +83,33 @@ ENABLE_HTTPS # if "true" it will server using SSL/HTTPS
 
 ```
 
-Make sure that litecoind is configured to [accept incoming connections using 'rpcallowip'](https://en.bitcoin.it/wiki/Running_Bitcoin).
+Make sure that PixoCashd is configured to [accept incoming connections using 'rpcallowip'](https://en.bitcoin.it/wiki/Running_Bitcoin).
 
 In case the network is changed (testnet to livenet or vice versa) levelDB database needs to be deleted. This can be performed running:
-```util/sync.js -D``` and waiting for *Litesight* to synchronize again.  Once the database is deleted, the sync.js process can be safely interrupted (CTRL+C) and continued from the synchronization process embedded in main app.
+```util/sync.js -D``` and waiting for *Pixo™Sight* to synchronize again.  Once the database is deleted, the sync.js process can be safely interrupted (CTRL+C) and continued from the synchronization process embedded in main app.
 
 ## Synchronization
 
-The initial synchronization process scans the blockchain from the paired litecoind server to update addresses and balances. *Litesight-api* needs exactly one trusted litecoind node to run. This node must have finished downloading the blockchain before running *Litesight-api*.
+The initial synchronization process scans the blockchain from the paired litecoind server to update addresses and balances. *Pixo™Sight-api* needs exactly one trusted litecoind node to run. This node must have finished downloading the blockchain before running *Pixo™Sight-api*.
 
-While *Litesight* is synchronizing the website can be accessed (the sync process is embedded in the webserver), but there may be missing data or incorrect balances for addresses. The 'sync' status is shown at the `/api/sync` endpoint.
+While *Pixo™Sight* is synchronizing the website can be accessed (the sync process is embedded in the webserver), but there may be missing data or incorrect balances for addresses. The 'sync' status is shown at the `/api/sync` endpoint.
 
-The blockchain can be read from litecoind's raw `.dat` files or RPC interface. 
+The blockchain can be read from PixoCashd's raw `.dat` files or RPC interface. 
 Reading the information from the `.dat` files is much faster so it's the
 recommended (and default) alternative. `.dat` files are scanned in the default
-location for each platform (for example, `~/.litecoin` on Linux). In case a
+location for each platform (for example, `~/.PixoCash` on Linux). In case a
 non-standard location is used, it needs to be defined (see the Configuration section).
 As of June 2014, using `.dat` files the sync process takes 9 hrs.
 for livenet and 30 mins. for testnet.
 
-While synchronizing the blockchain, *Litesight-api* listens for new blocks and
-transactions relayed by the litecoind node. Those are also stored on *Litesight-api*'s database.
-In case *Litesight-api* is shutdown for a period of time, restarting it will trigger
+While synchronizing the blockchain, *Pixo™Sight-api* listens for new blocks and
+transactions relayed by the PixoCashd node. Those are also stored on *Pixo™Sight-api*'s database.
+In case *Pixo™Sight-api* is shutdown for a period of time, restarting it will trigger
 a partial (historic) synchronization of the blockchain. Depending on the size of
 that synchronization task, a reverse RPC or forward `.dat` syncing strategy will be used.
 
-If litecoind is shutdown, *Litesight-api* needs to be stopped and restarted
-once litecoind is restarted.
+If PixoCashd is shutdown, *Pixo™Sight-api* needs to be stopped and restarted
+once PixoCashd is restarted.
 
 ### Syncing old blockchain data manually
 
@@ -120,7 +120,7 @@ once litecoind is restarted.
   Check util/sync.js --help for options, particulary -D to erase the current DB.
 
   *NOTE*: there is no need to run this manually since the historic synchronization
-  is built in into the web application. Running *Litesight-api* normally will trigger
+  is built in into the web application. Running *Pixo™Sight-api* normally will trigger
   the historic sync automatically.
 
 

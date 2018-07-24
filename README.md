@@ -25,7 +25,7 @@ The easiest way to do this is by copying `./etc/litecoind/litecoin.conf` to your
 Pixo™ Cash data directory (usually `~/.PixoCash` on Linux, `%appdata%\PixoCash\` on Windows,
 or `~/Library/Application Support/PixoCash` on Mac OS X).
 
-PixoCashd must be running and must have finished downloading the blockchain **before** running *Pixo™Sight API*.litecoin
+PixoCashd must be running and must have finished downloading the blockchain **before** running *Pixo™Sight API*
 
 
 * **Node.js v0.10.x** - Download and Install [Node.js](http://www.nodejs.org/download/).

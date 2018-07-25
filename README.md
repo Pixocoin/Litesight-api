@@ -45,7 +45,7 @@ PixoCashd must be running and must have finished downloading the blockchain **be
 
   Run the main application:
 
-    $ node Litesight.js
+    $ node insight.js
 
   Then open a browser and go to:
 

@@ -129,7 +129,7 @@ once PixoCashd is restarted.
 To store the blockchain and address related information, *Litesight-api* uses LevelDB.
 Two DBs are created: txs and blocks. By default these are stored on
 
-  ``~/.litecoin-insight/``
+  ``~/.PixoCash-insight/``
 
 Please note that some older versions of Litesight-API store that on `<Litesight's root>/db`.
 

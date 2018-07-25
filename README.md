@@ -21,7 +21,6 @@ be downloaded at [Github Pixo™Sight Repository](https://github.com/Pixocoin/Pi
 through the RPC API, Pixo™ Cash peer-to-peer protocol, and will even read its raw block .dat files for syncing.
 
 Configure PixoCashd to listen to RPC calls and set `txindex` to true.
-The easiest way to do this is by copying `./etc/litecoind/litecoin.conf` to your
 Pixo™ Cash data directory (usually `~/.PixoCash` on Linux, `%appdata%\PixoCash\` on Windows,
 or `~/Library/Application Support/PixoCash` on Mac OS X).
 

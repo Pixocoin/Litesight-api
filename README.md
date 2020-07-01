@@ -68,8 +68,8 @@ BITCOIND_USER         # RPC username
 BITCOIND_PASS         # RPC password
 BITCOIND_DATADIR      # PixoCashd datadir. 'testnet3' will be appended automatically if testnet is used. NEED to finish with '/'. e.g: `/vol/data/`
 INSIGHT_NETWORK [= 'livenet' | 'testnet']
-INSIGHT_PORT          # Litesight api port
-INSIGHT_DB            # Path where to store Litesight's internal DB. (defaults to $HOME/.litecoin-insight)
+INSIGHT_PORT          # Pixosight api port
+INSIGHT_DB            # Path where to store Pixosight's internal DB. (defaults to $HOME/.PixoCash-insight)
 INSIGHT_SAFE_CONFIRMATIONS=6  # Nr. of confirmation needed to start caching transaction information   
 INSIGHT_IGNORE_CACHE  # True to ignore cache of spents in transaction, with more than INSIGHT_SAFE_CONFIRMATIONS confirmations. This is useful for tracking double spents for old transactions.
 ENABLE_MAILBOX # if "true" will enable mailbox plugin
@@ -130,7 +130,7 @@ Two DBs are created: txs and blocks. By default these are stored on
 
   ``~/.PixoCash-insight/``
 
-Please note that some older versions of Litesight-API store that on `<Litesight's root>/db`.
+Please note that some older versions of Litesight-API store that on `<Pixosight's root>/db`.
 
 This can be changed at config/config.js. As of June 2014, storing the livenet blockchain takes ~35GB of disk space (2GB for the testnet).
 

@@ -136,7 +136,7 @@ This can be changed at config/config.js.
 
 ## Development
 
-To run Litesight locally for development with grunt:
+To run Pixosight locally for development with grunt:
 
 ```$ NODE_ENV=development grunt```
 
@@ -163,7 +163,7 @@ to ignore the cache in a particular API request.
 
 ## API
 
-By default, Litesight provides a REST API at `/api`, but this prefix is configurable from the var `apiPrefix` in the `config.js` file.
+By default, Pixosight provides a REST API at `/api`, but this prefix is configurable from the var `apiPrefix` in the `config.js` file.
 
 The end-points are:
 
@@ -287,7 +287,7 @@ POST response:
   /api/peer
 ```
 
-### Status of the litecoin network
+### Status of the PixoCash network
 ```
   /api/status?q=xxx
 ```
@@ -303,7 +303,7 @@ Where "xxx" can be:
 ## Web Socket API
 The web socket API is served using [socket.io](http://socket.io).
 
-The following are the events published by Litesight:
+The following are the events published by Pixosight:
 
 'tx': new transaction received from network. This event is published in the 'inv' room. Data will be a app/models/Transaction object.
 Sample output:
@@ -326,7 +326,7 @@ Sample output:
 }
 ```
 
-'<litecoinAddress>': new transaction concerning <litecoinAddress> received from network. This event is published in the '<litecoinAddress>' room.
+'<PixoCashAddress>': new transaction concerning <PixoCashAddress> received from network. This event is published in the '<PixoCashAddress>' room.
 
 'status': every 1% increment on the sync task, this event will be triggered. This event is published in the 'sync' room.
 
@@ -352,12 +352,12 @@ html
 ```
 <html>
 <body>
-  <script src="http://<Litesight-server>:<port>/socket.io/socket.io.js"></script>
+  <script src="http://<Pixosight-server>:<port>/socket.io/socket.io.js"></script>
   <script>
     eventToListenTo = 'tx'
     room = 'inv'
 
-    var socket = io("http://<Litesight-server>:<port>/");
+    var socket = io("http://<Pixosight-server>:<port>/");
     socket.on('connect', function() {
       // Join the room.
       socket.emit('subscribe', room);

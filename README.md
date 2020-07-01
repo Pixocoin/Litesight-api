@@ -60,13 +60,13 @@ PixoCashd must be running and must have finished downloading the blockchain **be
 All configuration is specified in the [config](config/) folder, particularly the [config.js](config/config.js) file. There you can specify your application name and database name. Certain configuration values are pulled from environment variables if they are defined:
 
 ```
-BITCOIND_HOST         # RPC litecoind host
-BITCOIND_PORT         # RPC litecoind Port
-BITCOIND_P2P_HOST     # P2P litecoind Host (will default to BITCOIND_HOST, if specified)
-BITCOIND_P2P_PORT     # P2P litecoind Port
+BITCOIND_HOST         # RPC PixoCashd host
+BITCOIND_PORT         # RPC PixoCashd Port
+BITCOIND_P2P_HOST     # P2P PixoCashd Host (will default to BITCOIND_HOST, if specified)
+BITCOIND_P2P_PORT     # P2P PixoCashd Port
 BITCOIND_USER         # RPC username
 BITCOIND_PASS         # RPC password
-BITCOIND_DATADIR      # litecoind datadir. 'testnet3' will be appended automatically if testnet is used. NEED to finish with '/'. e.g: `/vol/data/`
+BITCOIND_DATADIR      # PixoCashd datadir. 'testnet3' will be appended automatically if testnet is used. NEED to finish with '/'. e.g: `/vol/data/`
 INSIGHT_NETWORK [= 'livenet' | 'testnet']
 INSIGHT_PORT          # Litesight api port
 INSIGHT_DB            # Path where to store Litesight's internal DB. (defaults to $HOME/.litecoin-insight)

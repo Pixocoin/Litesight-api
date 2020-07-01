@@ -132,7 +132,7 @@ Two DBs are created: txs and blocks. By default these are stored on
 
 Please note that some older versions of Litesight-API store that on `<Pixosight's root>/db`.
 
-This can be changed at config/config.js. As of June 2014, storing the livenet blockchain takes ~35GB of disk space (2GB for the testnet).
+This can be changed at config/config.js.
 
 ## Development
 
